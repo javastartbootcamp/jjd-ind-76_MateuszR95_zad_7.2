@@ -4,12 +4,22 @@ import java.util.Arrays;
 
 public class Main {
 
-    // uzupełnij metodę BubbleSort.sort()
-    // poniżej przykładowe wydruki
-    // to zadanie ma dostępne testy jednostkowe w src/test/java/[...]/BubbleSortTest
     public static void main(String[] args) {
-        sortAndPrintInfo(1, 2, 3);
-        sortAndPrintInfo(5, 2, 1);
+
+        int[] arr = new int[99];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr.length - i;
+        }
+
+        int[] arr2 = new int[99];
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = i + 1;
+        }
+        sortAndPrintInfo(1, 2, 3, 4, 5);
+        sortAndPrintInfo(5, 4, 3, 2, 1);
+        sortAndPrintInfo(5, 2, 3, 1, 4);
+        sortAndPrintInfo(arr);
+        sortAndPrintInfo(arr2);
     }
 
     private static void sortAndPrintInfo(int... arrayToSort) {
